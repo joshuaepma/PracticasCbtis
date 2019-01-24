@@ -18,6 +18,7 @@ string replaceBlankWith20(string str)
 int main(int argc, char const *argv[])
 {
 	string s;
+    //obtengo toda la line incluyendo espacios
 	getline(cin,s);
 	cout << replaceBlankWith20(s) << endl;
 	return 0;

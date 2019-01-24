@@ -14,13 +14,10 @@ void hamada(int n){
 	}
 	cout<<endl<<endl;
 	if(p[0]!=p[n-1]){
-		if(p[0]<p[n-1] && p[n-1]-p[0]==1){
+		if(p[0]<p[n-1]){
 			m+=p[n-1]-p[0];
 			p[0]+=p[n-1]-p[0];
-		}else if(p[0]<p[n-1] && p[n-1]!=1){
-			m+=p[n-1]-p[0];
-			p[n-1]-=p[0];
-		}else if(p[0]>p[n-1] && p[0]-p[n-1]!=1){
+		}else{
 			m+=p[0]-p[n-1];
 			p[n-1]+=p[0]-p[n-1];
 		}
@@ -37,7 +34,7 @@ void hamada(int n){
 			p[i]-=p[a1]-1;
 			cout<<endl<<m<<endl;
 		}else if(p[i]<p[a1] && p[a1]-p[i]!=1){
-				p[i]+=p[a1]-p[i];
+				p[i]+=p[a1]-2;
 				m+=p[a1]-p[i];
 				cout<<endl<<m<<endl;
 		}
@@ -46,7 +43,7 @@ void hamada(int n){
 			p[j]-=p[a2]-1;
 			cout<<endl<<m<<endl;
 		}else if(p[j]<p[a2] && p[a2]-p[j]!=1){
-			p[j]+=p[a2]-p[i];
+			p[j]+=p[a2]-2;
 			m+=p[a2]-p[j];
 			cout<<endl<<m<<endl;
 		}
