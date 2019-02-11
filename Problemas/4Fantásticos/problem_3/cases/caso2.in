@@ -1,0 +1,50 @@
+19
+24 92 4 76 24 45 1 2 18 90 8 16 20 0 1 5 70 44 70
+70 84 78 25 86 2 80 92 94 90 85 64 70 0 20 13 9 89 12
+
+1263
+
+#include <cmath>
+#include <cstdio>
+
+#ifndef MAXN
+#define MAXN 300001
+#endif
+
+using namespace std;
+
+int a[MAXN],b[MAXN];
+int n;
+
+int f(int x){
+	int m=0;
+	for (int i = 0; i < n; ++i)
+	{
+		m+=abs(a[i]-x);
+		m+=abs(b[i]-x);
+	}
+	return m;
+}
+
+int main(int argc, char const *argv[])
+{
+	cin>>n;
+	for (int i = 0; i < n; ++i)cin>>a[i];
+	for (int i = 0; i < n; ++i)cin>>b[i];
+	int l,ma=0,in=0,mi;
+	for (int i = 0; i < n; ++i)
+		ma=max(ma,max(a[i],b[i]));
+	l=ma/2;
+	while(l<ma){
+		if(f(l)<f(l+1)){
+			ma=l;//l--;
+			l=ma/2+in;
+		}else{
+			in=l;//l++;
+			l=ma/2+in;
+		}
+	}
+	cout<<l<<endl;
+	cout<<f(l);
+	return 0;
+}

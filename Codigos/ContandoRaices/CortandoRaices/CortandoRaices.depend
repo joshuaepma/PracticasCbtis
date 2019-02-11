@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1549925077 source:c:\users\artus\desktop\respaldo\cbtis 271\c++projects\practicascinvestav\cortandoraices\main.cpp
+	<iostream>
+	<algorithm>
+	<cstdlib>
+	<cmath>
+	<cstdio>
+
