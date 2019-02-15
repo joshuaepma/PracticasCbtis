@@ -1,1 +1,2 @@
 # PracticasCbtis
+Este es un repositorio de todo lo que estoy haciendo en las practicas profesionales que estoy llevando a cabo en el CINVESTAV Tamaulipas, en el se encotraran códigos, problemas, libros y muchas más cosas. Espero te llame la atención y te guste.
